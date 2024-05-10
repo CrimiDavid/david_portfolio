@@ -1,0 +1,70 @@
+/* Keyframes for floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.container {
+    position: relative; /* Sets a positioning context for absolutely positioned children */
+    display: flex;
+    height: 100vh;
+    color: #FFF; /* White color for text */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.about-section, .skills-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Aligns content to the top */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-section h1, .skills-section h1 {
+    color: #FFFFFF;
+    font-size: 36px; /* Font size for headers */
+    margin-bottom: 20px; /* Space below headers */
+    animation: float 3s ease-in-out infinite; /* Applying the floating animation */
+}
+
+.about-section p {
+    color: #FFF; /* White color for paragraph text */
+    font-size: 21px; /* Adjust font size as needed */
+    line-height: 1.5; /* Spacing between lines */
+    text-align: left;
+    width: 80%; /* Control the width of the paragraph */
+    margin: 0 auto 20px; /* Centering the paragraph horizontally, adding space below */
+}
+
+.icons-container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: flex-start; /* Align items to the start of the container */
+    gap: 30px; /* Space between icons and button */
+    margin-top: 20px;
+    font-size: 40px; /* Sets icon size, assuming icons scale with font-size */
+    color: #FFFFFF;
+
+}
+
+.resume-button {
+    background-color: #FFFFFF; /* Bright blue background */
+    color: black; /* White text */
+    border: none;
+    padding: 10px 20px; /* Padding to match the visual weight of icons */
+    font-size: 1rem; /* Adjust font size to match the icon size visually */
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center; /* Ensures the button is aligned vertically with the icons */
+}
+
+.resume-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
