@@ -1,0 +1,111 @@
+.skills-section {
+
+}
+
+.filters {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    width: 500px;
+    max-height: 250px;
+    overflow-y: scroll; /* Ensures scrollbar is present */
+    /* Ensures scrollbar is always visible */
+    /* Webkit Scrollbar styles */
+    scrollbar-width: auto; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, and Edge */
+.skills-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.skills-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+}
+
+.skills-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.skill-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Fixed width for all cards */
+    height: 100px; /* Fixed height to create squares */
+    padding: 20px;
+    border-radius: 30px; /* Nicely rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Needed for pseudo-elements */
+    overflow: hidden; /* Keeps pseudo-elements within the card boundaries */
+}
+
+.skill-card:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%; /* Large enough to cover the card when rotated */
+    height: 200%; /* Same as width */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 10%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: scale(1.1) rotate(5deg); /* Slight scale and rotation on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.skill-card:hover:before {
+    transform: rotate(180deg); /* Rotates the pseudo-element */
+}
+
+.skill-card:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+}
+
+/* Adding a playful color gradient background on hover */
+.skill-card:hover {
+    background-image: linear-gradient(135deg, #eada9b 0%, #379e14 100%);
+    color: white; /* Change text color for better contrast on hover */
+}
+
+/* Enhancing visual interaction */
+.skill-card:hover .skill-icon {
+    animation: bounce 0.5s; /* Bouncing effect for the icon */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+input[type="checkbox"] {
+    margin-right: 5px; /* Space out the checkbox from the label */
+}
+
+.label {
+    display: flex;
+    align-items: center; /* Center label text with checkbox */
+}
+
+

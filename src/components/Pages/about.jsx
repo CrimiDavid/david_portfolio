@@ -1,6 +1,7 @@
 import React from 'react';
 import { SiGithub, SiLinkedin, SiUpwork } from 'react-icons/si';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import Skills from '../Objects/skills.jsx';  // Make sure the Skills component is correctly imported
 import './about.css'; // Ensure this path is correct
 
 function About() {
@@ -16,13 +17,12 @@ function About() {
                     <div className="icons-container d-flex align-items-center justify-content-start gap-2 mt-2">
                         <a href="https://github.com/"><SiGithub size={40}/></a>
                         <a href="https://linkedin.com"><SiLinkedin size={40}/></a>
-                        <a href="https://upwork.com"><SiUpwork size={40}/></a>
                         <Button variant="primary" className="resume-button">Resume</Button>
                     </div>
                 </Col>
                 <Col md={6} className="skills-section d-flex flex-column align-items-center justify-content-start p-3">
                     <h1>Skills</h1>
-                    {/* Skills content will go here */}
+                    <Skills /> {/* Skills content fully implemented here */}
                 </Col>
             </Row>
         </Container>
@@ -30,3 +30,4 @@ function About() {
 }
 
 export default About;
+
