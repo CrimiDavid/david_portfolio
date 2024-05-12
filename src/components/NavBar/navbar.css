@@ -4,3 +4,17 @@
     width: 100%;
     z-index: 50;
 }
+.line-over-icon::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%; /* Slightly larger to ensure it covers the whole circle */
+    height: 2px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+    transform: translate(-50%, -50%) rotate(45deg); /* Centers and rotates the line */
+    transform-origin: center;
+    z-index: 1;
+}
+
+

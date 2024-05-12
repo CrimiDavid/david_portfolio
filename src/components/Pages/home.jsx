@@ -42,7 +42,6 @@ import TreeComponent from "../Objects/tree.jsx";
 
         return (
             <div id="home" style={styles.container}>
-                <TreeComponent />
                 <h1 style={styles.header}>Hello, I'm David...</h1>
                 <p style={styles.paragraph}>
                     I'm thrilled to have you here.

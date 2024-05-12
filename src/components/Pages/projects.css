@@ -1,0 +1,15 @@
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.test{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}

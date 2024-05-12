@@ -6,7 +6,7 @@ import './about.css'; // Ensure this path is correct
 
 function About() {
     return (
-        <Container fluid className="p-0 min-vh-100 d-flex">
+        <Container fluid className="p-0 min-vh-100 d-flex fade-in">
             <Row className="flex-grow-1 w-100">
                 <Col md={6} className="about-section d-flex flex-column align-items-center justify-content-start p-3">
                     <h1>About Me</h1>
@@ -30,4 +30,3 @@ function About() {
 }
 
 export default About;
-

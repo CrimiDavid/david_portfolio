@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, BellIcon } from '@heroicons/react/24/outline';
 import './navbar.css';
+import treeIcon from '../../assets/—Pngtree—pixel art green tree_7325402.png';
 
 const navigation = [
     { name: 'Home', ref: 'home' },
@@ -14,9 +15,8 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Navbar({visible, setVisible}) {
     const [opacity, setOpacity] = useState(0);
-
     useEffect(() => {
         // Function to scroll to the home section
         const scrollToHome = () => {
@@ -71,7 +71,7 @@ export default function Navbar() {
                                         <button
                                             key={item.name}
                                             onClick={() => scrollToSection(item.ref)}
-                                            className={classNames('text-white hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-base font-medium')}
+                                            className={classNames('text-white hover:bg-blue-400 hover:text-green-500', 'rounded-md px-3 py-2 text-base font-medium')}
                                         >
                                             {item.name}
                                         </button>
@@ -79,12 +79,14 @@ export default function Navbar() {
                                     ))}
                                     <button
                                         type="button"
-                                        className="relative rounded-full bg-white p-1 text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                        className={`relative rounded-full bg-white p-1 text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 ${visible ? 'line-over-icon' : ''}`}
+                                        onClick={() => setVisible(current => !current)}
                                     >
                                         <span className="absolute -inset-1.5"/>
                                         <span className="sr-only">View notifications</span>
-                                        <BellIcon className="h-6 w-6" aria-hidden="true"/>
+                                        <img src={treeIcon} className="h-6 w-6" alt="Pixel Art Green Tree"/>
                                     </button>
+
                                 </div>
                             </div>
                         </div>
