@@ -8,13 +8,14 @@
 }
 /* Add to your styles.css or equivalent */
 .tree {
-    position: absolute;
+    position: relative;
     width: 400px; /* Size of the tree */
     height: 400px;
     background-image: url('/src/assets/—Pngtree—pixel art green tree_7325402.png'); /* Ensure the path is correct */
     background-size: cover;
     pointer-events: none; /* Prevents interaction, letting clicks pass through */
-    filter: blur(4px); /* Adjust the px value to increase or decrease the blur effect */
+    filter: blur(1px); /* Adjust the px value to increase or decrease the blur effect */
+
 }
 
 
